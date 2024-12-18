@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Předpověď počasí</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="city-input" placeholder="Zadejte město...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="weather-box">
+            <div class="weather-info">
+                <img id="weather-icon" src="" alt="Weather icon">
+                <h2 id="city">Město</h2>
+                <button id="favorite-btn" class="favorite-btn">
+                    <i class="far fa-heart"></i>
+                </button>
+                <div class="temperature">
+                    <span id="temp">--</span>°C
+                </div>
+                <p id="description">Počasí</p>
+                <div class="details">
+                    <div class="col">
+                        <i class="fas fa-water"></i>
+                        <div>
+                            <p id="humidity">--%</p>
+                            <p>Vlhkost</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p id="wind">-- m/s</p>
+                            <p>Vítr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecast-box">
+            <h3>Předpověď na 5 dní</h3>
+            <div class="forecast-container" id="forecast-container">
+                <!-- Sem se budou dynamicky vkládat předpovědi -->
+            </div>
+        </div>
+
+        <div class="lists-container">
+            <div class="favorites-box">
+                <h3>Oblíbená města</h3>
+                <ul id="favorites-list"></ul>
+            </div>
+
+            <div class="history-box">
+                <h3>Historie vyhledávání</h3>
+                <ul id="search-history"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
